@@ -7,14 +7,20 @@ jobs:
     name: Publish Docs
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@main
-
-      - name: Move files
-        run: |
-          rm -rf ./docs
-          mkdir ./docs
-          cp ./target/* ./docs
-          git add .
-          git commit -m "move docs into publish target"
-          git push target master
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: target # The folder the action should deploy.
+#
+#      - name: Move files
+#        run: |
+#          rm -rf ./docs
+#          mkdir ./docs
+#          cp ./target/* ./docs
+#
+#      # https://github.com/marketplace/actions/github-action-for-committing-changes-to-a-repository
+#      - name: Commit and push changes
+#        uses: devops-infra/action-commit-push@master
+#        with:
+#          github_token: ${{ secrets.GITHUB_TOKEN }}
+#          commit_message: Published docs
