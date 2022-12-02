@@ -1,0 +1,20 @@
+name: Publish docs
+
+on: workflow_dispatch
+
+jobs:
+  publish_docs:
+    name: Publish Docs
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@main
+
+      - name: Move files
+        run: |
+          rm -rf ./docs
+          mkdir ./docs
+          cp ./target/* ./docs
+          git add .
+          git commit -m "move docs into publish target"
+          git push target master
