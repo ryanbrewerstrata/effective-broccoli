@@ -1,3 +1,9 @@
+# Developer Note: this script is in beta, but is the official github pages static deploy script...
+# It's what gets suggested when you flip "Github > Settings > Pages > Deployment" to the new beta GitHub Actions option
+# https://github.com/actions/deploy-pages
+
+
+
 # Simple workflow for deploying static content to GitHub Pages
 name: Deploy static content to Pages
 
