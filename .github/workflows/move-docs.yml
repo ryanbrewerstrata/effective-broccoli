@@ -7,11 +7,13 @@ jobs:
     name: Publish Docs
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@main
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: effective-broccoli/target # The folder the action should deploy.
-          target-folder: effective-broccoli/docs
+          folder: target # The folder the action should deploy.
+          target-folder: docs
 #
 #      - name: Move files
 #        run: |
