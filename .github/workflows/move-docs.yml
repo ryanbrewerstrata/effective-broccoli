@@ -10,7 +10,7 @@ jobs:
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: target # The folder the action should deploy.
+          folder: ../target # The folder the action should deploy.
 #
 #      - name: Move files
 #        run: |
